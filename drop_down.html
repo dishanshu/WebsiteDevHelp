@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+ display: flex;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+
+  margin-top: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  
+}
+
+#drop_down_section {
+text-align-last: center;
+background: space;
+}
+
+#drop_button {
+display: inline-block;
+padding:10px;
+}
+#on_off{
+vertical-align: middle;
+font-size: large;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+Create three equal columns that floats next to each other
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.drop_image{
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+
+}
+</style>
+</head>
+<body>
+<div id=drop_down_section>
+<button onclick="myFunction()"  id="drop_button"><span id="on_off" style="padding: 10px;">+ </span>Promotional Material Instructions</button>
+</div>
+<div id="myDIV" >
+<h1>Promotional Matericfgval yjkInstruction</h1>
+
+<div class="row">
+  <div class="column" >
+    <h2>Column 1</h2>
+    <img src="https://www.w3schools.com/css/paris.jpg" alt="Paris" class="drop_image">
+  </div>
+  <div class="column" >
+    <h2>Column 2</h2>
+    <img src="https://www.w3schools.com/css/paris.jpg" alt="Paris" class="drop_image">
+  </div>
+  <div class="column" >
+    <h2>Column 3</h2>
+    <img src="https://www.w3schools.com/css/paris.jpg" alt="Paris" class="drop_image">
+  </div>
+</div>
+
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("on_off").innerHTML = "+";
+  } else {
+    x.style.display = "none";
+    document.getElementById("on_off").innerHTML = "↑";
+  }
+}
+</script>
+
+</body>
+</html>
+
